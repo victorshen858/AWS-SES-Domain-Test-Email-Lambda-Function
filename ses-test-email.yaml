@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: SES Test Email Lambda Function
+
+Resources:
+  SESTestEmailLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: SESTestEmailLambda
+      Runtime: python3.11
+      Handler: lambda_function.lambda_handler
+      Role: arn:aws:iam::INSERT_ACCOUNT_ID_HERE:role/INSERT_ROLE_NAME_HERE
+      Code:
+        S3Bucket: INSERT_LAMBDA_CODE_BUCKET_HERE
+        S3Key: lambda_function.zip
+      Timeout: 60
+      MemorySize: 128
+      Environment:
+        Variables:
+          CONFIG_S3_BUCKET: INSERT_OPTIONAL_CONFIG_BUCKET_HERE
+
+Outputs:
+  LambdaFunctionName:
+    Description: Name of SES Test Email Lambda
+    Value: !Ref SESTestEmailLambda
