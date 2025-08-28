@@ -48,17 +48,17 @@ aws cloudformation deploy \
   --capabilities CAPABILITY_NAMED_IAM
 ```
 
-Replace placeholders in the YAML:
+**Replace placeholders in the YAML:**
 
-INSERT_ACCOUNT_ID_HERE → your AWS account ID
+INSERT_ACCOUNT_ID_HERE → **your AWS account ID**
 
-INSERT_ROLE_NAME_HERE → IAM role name for Lambda
+INSERT_ROLE_NAME_HERE → **IAM role name for Lambda**
 
-INSERT_LAMBDA_CODE_BUCKET_HERE → S3 bucket containing lambda_function.zip
+INSERT_LAMBDA_CODE_BUCKET_HERE → **S3 bucket containing lambda_function.zip**
 
-INSERT_OPTIONAL_CONFIG_BUCKET_HERE → optional S3 bucket for config
-
-Testing
+INSERT_OPTIONAL_CONFIG_BUCKET_HERE → **optional S3 bucket for config
+**
+## Testing
 
 Invoke Lambda manually via AWS Console or CLI:
 ```json
@@ -71,6 +71,6 @@ Check response.json for success or error message.
 
 ### Notes
 
-do-not-reply@YOUR_VERIFIED_DOMAIN.com can be replaced with any SES verified email.\
-Ensure Lambda IAM role has permission: ses:SendEmail.\
-Multiple recipients can be added in TO_EMAILS.\
+-do-not-reply@YOUR_VERIFIED_DOMAIN.com can be replaced with any SES verified email.\
+-Ensure Lambda IAM role has permission: ses:SendEmail.\
+-Multiple recipients can be added in TO_EMAILS.\
