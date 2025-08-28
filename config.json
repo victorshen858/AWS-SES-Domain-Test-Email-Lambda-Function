@@ -1,0 +1,9 @@
+{
+    "FROM_EMAIL": "do-not-reply@INSERT_YOUR_VERIFIED_DOMAIN_HERE.com",
+    "TO_EMAILS": [
+        "test_user_1@INSERT_VERIFIED_DOMAIN_HERE.com",
+        "test_user_2@INSERT_VERIFIED_DOMAIN_HERE.com"
+    ],
+    "SUBJECT": "SES Test Email",
+    "BODY": "This is a test email sent via AWS SES using Lambda."
+}
